@@ -1,0 +1,2608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Challa Ashok | ECE Student | Aspiring Engineer</title>
+
+    <meta name="description"
+        content="Challa Ashok - Electronics and Communication Engineering student and aspiring engineer.">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #101014;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(16, 16, 20, 0.97);
+            border-bottom: 1px solid #2b2b32;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1250px;
+            margin: auto;
+            padding: 17px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span,
+        .highlight {
+            color: #ffb400;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: #ddd;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffb400;
+        }
+
+
+        /* =========================================================
+           COMMON
+        ========================================================= */
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #ffb400;
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 8px;
+            background: #ffb400;
+            color: #111;
+            font-weight: bold;
+            margin-right: 10px;
+            transition: 0.3s;
+            border: 1px solid #ffb400;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 180, 0, 0.18);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #ffb400;
+            color: #ffb400;
+        }
+
+        .btn-outline:hover {
+            background: #ffb400;
+            color: #111;
+        }
+
+
+        /* =========================================================
+           HOME
+        ========================================================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+        }
+
+        .home-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .home-text {
+            flex: 1;
+        }
+
+        .home-text h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h1 span {
+            color: #ffb400;
+        }
+
+        .home-text h3 {
+            font-size: 25px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            color: #bbb;
+            max-width: 680px;
+            margin-bottom: 28px;
+            font-size: 17px;
+        }
+
+        .home-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .home-buttons .btn {
+            margin-right: 0;
+        }
+
+
+        /* =========================================================
+           PROFILE IMAGE
+        ========================================================= */
+
+        .profile-box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffb400;
+            flex-shrink: 0;
+            background: #18181e;
+            box-shadow: 0 0 45px rgba(255, 180, 0, 0.10);
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            background: #18181e;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #292930;
+        }
+
+        .about-content p {
+            color: #ccc;
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill {
+            background: #18181e;
+            border: 1px solid #292930;
+            padding: 22px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #ffb400;
+        }
+
+        .skill h3 {
+            font-size: 17px;
+        }
+
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            background: #18181e;
+            border-left: 4px solid #ffb400;
+            padding: 25px;
+            margin-bottom: 22px;
+            border-radius: 8px;
+        }
+
+        .timeline-item h3 {
+            color: #ffb400;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #bbb;
+        }
+
+        .date {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #18181e;
+            border: 1px solid #292930;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: 0.35s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #ffb400;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* PROJECT THUMBNAILS */
+
+        .project-thumbnail {
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+            background: #202028;
+        }
+
+        .project-thumbnail svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-thumbnail svg {
+            transform: scale(1.05);
+        }
+
+
+        .project-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-number {
+            color: #ffb400;
+            font-size: 13px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .project-card p {
+            color: #bbb;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+
+        /* TECHNOLOGY TAGS */
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: #24242c;
+            border: 1px solid #363640;
+            color: #ddd;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .project-buttons .btn {
+            margin-right: 0;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           RESUME
+        ========================================================= */
+
+        #resume {
+            background: #111116;
+        }
+
+        .resume-intro {
+            max-width: 750px;
+            margin: -20px auto 35px;
+            text-align: center;
+            color: #bbb;
+        }
+
+        .resume-wrapper {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .resume-thumbnail {
+            max-width: 420px;
+            margin: auto;
+            background: #18181e;
+            border: 1px solid #292930;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.35s;
+        }
+
+        .resume-thumbnail:hover {
+            transform: translateY(-7px);
+            border-color: #ffb400;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .resume-cover {
+            height: 310px;
+            background: #17191c;
+            color: #f4f4f4;
+            border: 1px solid #73777c;
+            border-radius: 3px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .resume-cover::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px solid #555a60;
+            pointer-events: none;
+        }
+
+        .resume-cover-icon {
+            width: 42px;
+            height: 52px;
+            border: 2px solid #f4f4f4;
+            position: relative;
+            z-index: 1;
+        }
+
+        .resume-cover-icon::before,
+        .resume-cover-icon::after {
+            content: "";
+            position: absolute;
+            left: 9px;
+            right: 9px;
+            height: 2px;
+            background: #f4f4f4;
+        }
+
+        .resume-cover-icon::before {
+            top: 19px;
+        }
+
+        .resume-cover-icon::after {
+            top: 29px;
+        }
+
+        .resume-cover-title {
+            position: relative;
+            z-index: 1;
+            font-size: 25px;
+            letter-spacing: 7px;
+            margin-left: 7px;
+        }
+
+        .resume-click-text {
+            margin-top: 18px;
+            color: #ffb400;
+            font-weight: bold;
+        }
+
+        .resume-viewer {
+            display: none;
+            margin-top: 35px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .resume-viewer.active {
+            display: block;
+        }
+
+        .resume-image {
+            width: 100%;
+            border: 1px solid #292930;
+            border-radius: 12px;
+            background: white;
+            display: block;
+        }
+
+        .resume-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .resume-actions .btn {
+            margin-right: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================================================
+           CERTIFICATIONS
+        ========================================================= */
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 22px;
+        }
+
+        .cert-card {
+            background: #18181e;
+            border: 1px solid #292930;
+            padding: 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffb400;
+        }
+
+        .cert-card h3 {
+            color: #ffb400;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
+            color: #bbb;
+        }
+
+
+        /* =========================================================
+           ACHIEVEMENTS
+        ========================================================= */
+
+        .achievement-card {
+            max-width: 800px;
+            margin: auto;
+            background: #18181e;
+            border: 1px solid #292930;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .achievement-card h3 {
+            color: #ffb400;
+            margin-bottom: 12px;
+        }
+
+        .achievement-card p {
+            color: #bbb;
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-card {
+            background: #18181e;
+            border: 1px solid #292930;
+            padding: 22px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: #ffb400;
+            transform: translateY(-4px);
+        }
+
+        .contact-card h3 {
+            color: #ffb400;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #ccc;
+            word-break: break-word;
+        }
+
+
+        /* CONTACT FORM */
+
+        .contact-form {
+            background: #18181e;
+            border: 1px solid #292930;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-form h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .contact-form > p {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: #101014;
+            color: white;
+            border: 1px solid #34343d;
+            border-radius: 8px;
+            padding: 13px 14px;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffb400;
+            box-shadow: 0 0 0 2px rgba(255, 180, 0, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            margin-right: 0;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #0b0b0e;
+            border-top: 1px solid #292930;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 18px 0;
+        }
+
+        .social-links a {
+            color: #ffb400;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-buttons {
+                justify-content: center;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .home-text h1 {
+                font-size: 36px;
+            }
+
+            .home-text h3 {
+                font-size: 21px;
+            }
+
+            .profile-box {
+                width: 230px;
+                height: 230px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .container {
+                padding: 0 18px;
+            }
+
+            nav {
+                padding: 14px 12px;
+            }
+
+            nav ul li a {
+                font-size: 12px;
+            }
+
+            .home-text h1 {
+                font-size: 31px;
+            }
+
+            .project-thumbnail {
+                height: 170px;
+            }
+
+            .resume-cover {
+                height: 270px;
+                padding: 20px;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Challa <span>Ashok</span>
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#education">Education</a></li>
+
+            <li><a href="#experience">Experience</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#resume">Resume</a></li>
+
+            <li><a href="#certifications">Certifications</a></li>
+
+            <li><a href="#achievements">Achievements</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="home-content">
+
+            <div class="home-text">
+
+                <h1>
+                    Hello, I'm <span>Challa Ashok</span>
+                </h1>
+
+                <h3>
+                    ECE Student | Aspiring Engineer
+                </h3>
+
+                <p>
+                    Electronics and Communication Engineering student with
+                    practical exposure to Python, Networking, ServiceNow,
+                    CAD, AutoCAD, Machine Learning, Embedded Systems and
+                    technical projects.
+                </p>
+
+                <div class="home-buttons">
+
+                    <a href="#projects" class="btn">
+                        View Projects
+                    </a>
+
+                    <a href="#resume" class="btn btn-outline">
+                        View Resume
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-box">
+
+                <img
+                    src="./my-avatar.png"
+                    alt="Challa Ashok"
+                    loading="eager"
+                    decoding="async">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Me</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                I am Challa Ashok, an Electronics and Communication Engineering
+                student with an interest in technology, engineering and
+                practical problem solving.
+            </p>
+
+            <br>
+
+            <p>
+                I have exposure to Python, Networking, ServiceNow, CAD,
+                AutoCAD, Machine Learning, Embedded Systems and technical
+                projects. I enjoy learning new technologies and applying
+                them to real-world problems.
+            </p>
+
+            <br>
+
+            <p>
+                My goal is to continuously improve my technical skills,
+                gain industry experience and build useful engineering
+                solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Skills</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill">
+                <h3>C</h3>
+            </div>
+
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Networking</h3>
+            </div>
+
+            <div class="skill">
+                <h3>ServiceNow</h3>
+            </div>
+
+            <div class="skill">
+                <h3>AutoCAD</h3>
+            </div>
+
+            <div class="skill">
+                <h3>CAD</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Machine Learning</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Embedded Systems</h3>
+            </div>
+
+            <div class="skill">
+                <h3>IoT</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Chip Design</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Education</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    B.Tech – Electronics and Communication Engineering
+                </h3>
+
+                <h4>
+                    Kallam Haranadhareddy Institute of Technology (KHIT)
+                </h4>
+
+                <div class="date">
+                    2023 – 2027
+                </div>
+
+                <p>
+                    CGPA: 7.4 / 10
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Intermediate – MPC
+                </h3>
+
+                <h4>
+                    NRI College, Guntur
+                </h4>
+
+                <div class="date">
+                    2021 – 2023
+                </div>
+
+                <p>
+                    Score: 858 / 1000
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    SSC
+                </h3>
+
+                <h4>
+                    ZPHS School
+                </h4>
+
+                <div class="date">
+                    2021
+                </div>
+
+                <p>
+                    Score: 385 / 600
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Experience</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+                    Retail Associate
+                </h3>
+
+                <h4>
+                    Reliance Smart, Guntur
+                </h4>
+
+                <div class="date">
+                    4 Months
+                </div>
+
+                <p>
+                    Gained practical experience in customer interaction,
+                    teamwork, inventory handling and daily store operations.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Chip Design
+                </h3>
+
+                <h4>
+                    Bhagawati Limited, Hyderabad
+                </h4>
+
+                <p>
+                    Gained exposure to chip design concepts and technical
+                    processes in an industry-oriented environment.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    ServiceNow Internship
+                </h3>
+
+                <h4>
+                    ServiceNow
+                </h4>
+
+                <p>
+                    Completed training and internship-oriented learning
+                    covering ServiceNow platform concepts, user roles,
+                    groups and access control.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    NASSCOM Internship
+                </h3>
+
+                <h4>
+                    NASSCOM
+                </h4>
+
+                <p>
+                    Internship experience with exposure to industry-oriented
+                    technical learning and professional technical practices.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    L4G Workshop
+                </h3>
+
+                <h4>
+                    L4G
+                </h4>
+
+                <p>
+                    Participated in a technical workshop and gained
+                    practical learning experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Projects</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <div class="project-card">
+
+                <div class="project-thumbnail">
+
+                    <!-- Simple ship/fuel thumbnail -->
+
+                    <svg viewBox="0 0 800 450"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <defs>
+
+                            <linearGradient id="fuelBg"
+                                x1="0" y1="0" x2="1" y2="1">
+
+                                <stop offset="0%" stop-color="#15151d"/>
+
+                                <stop offset="100%" stop-color="#38301b"/>
+
+                            </linearGradient>
+
+                        </defs>
+
+                        <rect width="800" height="450"
+                              fill="url(#fuelBg)"/>
+
+                        <circle cx="650" cy="100"
+                                r="65"
+                                fill="#ffb400"
+                                opacity="0.12"/>
+
+                        <path d="M0 345
+                                 C170 315 280 355 420 330
+                                 C560 305 680 330 800 315
+                                 L800 450 L0 450 Z"
+                              fill="#111118"/>
+
+                        <path d="M180 315
+                                 L600 315
+                                 L650 355
+                                 L145 355 Z"
+                              fill="#d0d0d0"/>
+
+                        <rect x="260" y="255"
+                              width="230"
+                              height="60"
+                              rx="4"
+                              fill="#e2e2e2"/>
+
+                        <rect x="295" y="210"
+                              width="120"
+                              height="45"
+                              fill="#bcbcbc"/>
+
+                        <rect x="310" y="220"
+                              width="22"
+                              height="25"
+                              fill="#292930"/>
+
+                        <rect x="345" y="220"
+                              width="22"
+                              height="25"
+                              fill="#292930"/>
+
+                        <rect x="380" y="220"
+                              width="22"
+                              height="25"
+                              fill="#292930"/>
+
+                        <path d="M470 255 L470 175 L510 175 L510 255"
+                              fill="#777"/>
+
+                        <path d="M490 175 L490 130"
+                              stroke="#777"
+                              stroke-width="8"/>
+
+                        <circle cx="490" cy="115"
+                                r="20"
+                                fill="#ffb400"/>
+
+                        <text x="40" y="70"
+                              fill="#ffffff"
+                              font-size="34"
+                              font-family="Arial"
+                              font-weight="bold">
+                            FUEL OPTIMIZATION
+                        </text>
+
+                        <text x="40" y="105"
+                              fill="#ffb400"
+                              font-size="20"
+                              font-family="Arial">
+                            Green Fleet • Prediction
+                        </text>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        Quantum-Inspired Fuel Consumption Prediction
+                        & Green Fleet Optimization
+                    </h3>
+
+                    <p>
+                        A project focused on fuel consumption prediction
+                        and green fleet optimization using a
+                        quantum-inspired approach.
+                    </p>
+
+
+                    <div class="tech-tags">
+
+                        <span class="tech-tag">Python</span>
+
+                        <span class="tech-tag">Machine Learning</span>
+
+                        <span class="tech-tag">Optimization</span>
+
+                        <span class="tech-tag">Streamlit</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://quantum-eh7nexepmaeunwgbg5wsgp.streamlit.app/"
+                            target="_blank"
+                            class="btn">
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 02 -->
+
+            <div class="project-card">
+
+                <div class="project-thumbnail">
+
+                    <!-- Flood thumbnail -->
+
+                    <svg viewBox="0 0 800 450"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <defs>
+
+                            <linearGradient id="floodBg"
+                                x1="0" y1="0" x2="1" y2="1">
+
+                                <stop offset="0%" stop-color="#15202b"/>
+
+                                <stop offset="100%" stop-color="#173d50"/>
+
+                            </linearGradient>
+
+                        </defs>
+
+                        <rect width="800"
+                              height="450"
+                              fill="url(#floodBg)"/>
+
+                        <!-- Clouds -->
+
+                        <g fill="#dce5ea" opacity="0.8">
+
+                            <circle cx="145" cy="115" r="35"/>
+
+                            <circle cx="190" cy="100" r="50"/>
+
+                            <circle cx="245" cy="120" r="35"/>
+
+                            <rect x="140" y="120"
+                                  width="115"
+                                  height="35"
+                                  rx="20"/>
+
+                        </g>
+
+
+                        <!-- Rain -->
+
+                        <g stroke="#77c8e8"
+                           stroke-width="5"
+                           opacity="0.65">
+
+                            <line x1="145" y1="165"
+                                  x2="125" y2="220"/>
+
+                            <line x1="190" y1="165"
+                                  x2="170" y2="220"/>
+
+                            <line x1="235" y1="165"
+                                  x2="215" y2="220"/>
+
+                            <line x1="280" y1="165"
+                                  x2="260" y2="220"/>
+
+                        </g>
+
+
+                        <!-- Water -->
+
+                        <path d="M0 285
+                                 C120 250 200 315 320 280
+                                 C440 245 550 315 680 270
+                                 C730 255 770 260 800 270
+                                 L800 450
+                                 L0 450 Z"
+                              fill="#287c9c"/>
+
+
+                        <path d="M0 330
+                                 C130 300 220 355 350 320
+                                 C470 290 600 355 800 315"
+                              fill="none"
+                              stroke="#7ed7e9"
+                              stroke-width="9"
+                              opacity="0.65"/>
+
+
+                        <!-- House -->
+
+                        <path d="M510 205 L610 130 L710 205 Z"
+                              fill="#a85f42"/>
+
+                        <rect x="535" y="200"
+                              width="150"
+                              height="100"
+                              fill="#c68a60"/>
+
+                        <rect x="595" y="240"
+                              width="35"
+                              height="60"
+                              fill="#51372d"/>
+
+                        <rect x="555" y="220"
+                              width="25"
+                              height="25"
+                              fill="#6c9fb5"/>
+
+                        <rect x="645" y="220"
+                              width="25"
+                              height="25"
+                              fill="#6c9fb5"/>
+
+
+                        <text x="40" y="65"
+                              fill="#ffffff"
+                              font-size="34"
+                              font-family="Arial"
+                              font-weight="bold">
+                            FLOOD PREDICTION
+                        </text>
+
+                        <text x="40" y="100"
+                              fill="#7ed7e9"
+                              font-size="20"
+                              font-family="Arial">
+                            Rainfall • Risk • Machine Learning
+                        </text>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        Rising Waters – Flood Prediction System
+                    </h3>
+
+                    <p>
+                        Developed a machine learning system to predict
+                        flood risk using historical weather and rainfall
+                        data. Implemented Decision Tree, Random Forest,
+                        KNN and XGBoost.
+                    </p>
+
+
+                    <div class="tech-tags">
+
+                        <span class="tech-tag">Python</span>
+
+                        <span class="tech-tag">Machine Learning</span>
+
+                        <span class="tech-tag">Flask</span>
+
+                        <span class="tech-tag">XGBoost</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://ashok121105-xxtfddc3lvf8fvrrelub3o.streamlit.app/"
+                            target="_blank"
+                            class="btn">
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 03 -->
+
+            <div class="project-card">
+
+                <div class="project-thumbnail">
+
+                    <!-- Weather thumbnail -->
+
+                    <svg viewBox="0 0 800 450"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <defs>
+
+                            <linearGradient id="weatherBg"
+                                x1="0" y1="0" x2="1" y2="1">
+
+                                <stop offset="0%" stop-color="#18283c"/>
+
+                                <stop offset="100%" stop-color="#304c63"/>
+
+                            </linearGradient>
+
+                        </defs>
+
+                        <rect width="800"
+                              height="450"
+                              fill="url(#weatherBg)"/>
+
+
+                        <!-- Sun -->
+
+                        <circle cx="600"
+                                cy="135"
+                                r="72"
+                                fill="#ffb400"/>
+
+                        <circle cx="600"
+                                cy="135"
+                                r="95"
+                                fill="#ffb400"
+                                opacity="0.12"/>
+
+
+                        <!-- Cloud -->
+
+                        <g fill="#f1f4f5">
+
+                            <circle cx="270"
+                                    cy="240"
+                                    r="55"/>
+
+                            <circle cx="330"
+                                    cy="220"
+                                    r="75"/>
+
+                            <circle cx="405"
+                                    cy="245"
+                                    r="55"/>
+
+                            <rect x="260"
+                                  y="240"
+                                  width="175"
+                                  height="60"
+                                  rx="30"/>
+
+                        </g>
+
+
+                        <!-- Map pin -->
+
+                        <path d="M150 130
+                                 C115 130 90 158 90 193
+                                 C90 235 150 285 150 285
+                                 C150 285 210 235 210 193
+                                 C210 158 185 130 150 130 Z"
+                              fill="#ffb400"/>
+
+                        <circle cx="150"
+                                cy="190"
+                                r="22"
+                                fill="#18283c"/>
+
+
+                        <text x="40"
+                              y="65"
+                              fill="#ffffff"
+                              font-size="34"
+                              font-family="Arial"
+                              font-weight="bold">
+                            AI WEATHER AGENT
+                        </text>
+
+                        <text x="40"
+                              y="100"
+                              fill="#ffb400"
+                              font-size="20"
+                              font-family="Arial">
+                            Weather • Location • Intelligence
+                        </text>
+
+
+                        <!-- Bottom waves -->
+
+                        <path d="M0 355
+                                 C120 320 240 390 360 350
+                                 C480 310 600 385 800 340
+                                 L800 450 L0 450 Z"
+                              fill="#111118"/>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Weather Agent
+                    </h3>
+
+                    <p>
+                        An interactive weather application designed
+                        to provide weather-related information through
+                        a simple and practical interface.
+                    </p>
+
+
+                    <div class="tech-tags">
+
+                        <span class="tech-tag">Python</span>
+
+                        <span class="tech-tag">Streamlit</span>
+
+                        <span class="tech-tag">Weather API</span>
+
+                        <span class="tech-tag">Folium</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://weather-agent-2jgg2wxo7njqo6pam3rpgv.streamlit.app/"
+                            target="_blank"
+                            class="btn">
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 04 -->
+
+            <div class="project-card">
+
+                <div class="project-thumbnail">
+
+                    <!-- Traffic / signal thumbnail -->
+
+                    <svg viewBox="0 0 800 450"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <defs>
+
+                            <linearGradient id="signalBg"
+                                x1="0" y1="0" x2="1" y2="1">
+
+                                <stop offset="0%" stop-color="#15151c"/>
+
+                                <stop offset="100%" stop-color="#32323c"/>
+
+                            </linearGradient>
+
+                        </defs>
+
+                        <rect width="800"
+                              height="450"
+                              fill="url(#signalBg)"/>
+
+
+                        <!-- Road -->
+
+                        <rect x="0"
+                              y="280"
+                              width="800"
+                              height="170"
+                              fill="#222229"/>
+
+                        <rect x="0"
+                              y="358"
+                              width="800"
+                              height="6"
+                              fill="#dddddd"
+                              opacity="0.7"/>
+
+                        <rect x="100"
+                              y="358"
+                              width="90"
+                              height="6"
+                              fill="#222229"/>
+
+                        <rect x="300"
+                              y="358"
+                              width="90"
+                              height="6"
+                              fill="#222229"/>
+
+                        <rect x="500"
+                              y="358"
+                              width="90"
+                              height="6"
+                              fill="#222229"/>
+
+
+                        <!-- Traffic signal -->
+
+                        <rect x="120"
+                              y="105"
+                              width="75"
+                              height="155"
+                              rx="12"
+                              fill="#101014"/>
+
+                        <circle cx="157"
+                                cy="135"
+                                r="20"
+                                fill="#e94b4b"/>
+
+                        <circle cx="157"
+                                cy="180"
+                                r="20"
+                                fill="#ffb400"/>
+
+                        <circle cx="157"
+                                cy="225"
+                                r="20"
+                                fill="#43b86b"/>
+
+
+                        <!-- Pole -->
+
+                        <rect x="150"
+                              y="260"
+                              width="14"
+                              height="110"
+                              fill="#777"/>
+
+
+                        <!-- Car -->
+
+                        <rect x="430"
+                              y="320"
+                              width="160"
+                              height="48"
+                              rx="12"
+                              fill="#ffb400"/>
+
+                        <rect x="465"
+                              y="292"
+                              width="90"
+                              height="38"
+                              rx="12"
+                              fill="#555"/>
+
+                        <circle cx="465"
+                                cy="370"
+                                r="17"
+                                fill="#111118"/>
+
+                        <circle cx="555"
+                                cy="370"
+                                r="17"
+                                fill="#111118"/>
+
+
+                        <text x="40"
+                              y="65"
+                              fill="#ffffff"
+                              font-size="34"
+                              font-family="Arial"
+                              font-weight="bold">
+                            SIGNAL SYNC
+                        </text>
+
+                        <text x="40"
+                              y="100"
+                              fill="#ffb400"
+                              font-size="20"
+                              font-family="Arial">
+                            Intelligent Safety Monitoring
+                        </text>
+
+                    </svg>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        Signal Sync – Intelligent Safety Monitoring System
+                    </h3>
+
+                    <p>
+                        Developed an ESP32-based system to collect and
+                        synchronize signals from multiple electronic
+                        sensors including MPU6050, NEO-6M GPS, OLED
+                        display and buzzer alerts.
+                    </p>
+
+
+                    <div class="tech-tags">
+
+                        <span class="tech-tag">ESP32</span>
+
+                        <span class="tech-tag">MPU6050</span>
+
+                        <span class="tech-tag">GPS</span>
+
+                        <span class="tech-tag">Embedded Systems</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://w8c3umcrqtrwvbqha9hmbg.streamlit.app/"
+                            target="_blank"
+                            class="btn">
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESUME
+========================================================= -->
+
+<section id="resume">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Resume</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="resume-intro">
+
+            Interested in learning more about my education, skills,
+            experience and projects? View my resume below.
+
+        </p>
+
+
+        <div class="resume-wrapper">
+
+
+            <!-- CLICKABLE RESUME THUMBNAIL -->
+
+            <div
+                class="resume-thumbnail"
+                onclick="openResume()"
+                role="button"
+                tabindex="0"
+                aria-label="Open Resume">
+
+                <div class="resume-cover">
+                    <div class="resume-cover-icon"></div>
+                    <div class="resume-cover-title">RESUME</div>
+                </div>
+
+
+                <div class="resume-click-text">
+                    👆 Click to View Resume
+                </div>
+
+            </div>
+
+
+
+            <!-- ORIGINAL RESUME PREVIEW -->
+
+            <div
+                id="resumeViewer"
+                class="resume-viewer">
+
+                <img
+                    src="resume.png"
+                    class="resume-image"
+                    alt="Challa Ashok Resume">
+
+
+                <div class="resume-actions">
+
+                    <a
+                        href="resume.pdf"
+                        download="Challa_Ashok_Resume.pdf"
+                        class="btn">
+
+                        ⬇ Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Certifications</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+
+            <div class="cert-card">
+
+                <h3>
+                    NPTEL
+                </h3>
+
+                <p>
+                    Introduction to Internet of Things
+                    <br>
+                    12-Week Course | Jul–Oct 2025
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    ServiceNow
+                </h3>
+
+                <p>
+                    Virtual Internship Program
+                    <br>
+                    SmartBridge | May 2026
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    CodeTantra
+                </h3>
+
+                <p>
+                    Python Programming – SEC-1
+                    <br>
+                    Jul–Nov 2024
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    Wadhwani Foundation
+                </h3>
+
+                <p>
+                    Effective Speaking and Listening Skills
+                    <br>
+                    6 Hours | July 2025
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACHIEVEMENTS
+========================================================= -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Achievements</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="achievement-card">
+
+            <h3>
+                Hackathon Participation – SAMKALP
+            </h3>
+
+            <p>
+                Participated in the Hackathon event at SAMKALP,
+                a National Level Student Techno-Management Fest,
+                held on 19 December 2025 and organized by
+                Kallam Haranadhareddy Institute of Technology.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT / GET IN TOUCH
+========================================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Get In Touch</h2>
+
+            <span></span>
+
+        </div>
+
+
+        <div class="contact-layout">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+
+                <a
+                    href="tel:6304028416"
+                    class="contact-card">
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        6304028416
+                    </p>
+
+                </a>
+
+
+                <a
+                    href="mailto:challaashok99@gmail.com"
+                    class="contact-card">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        challaashok99@gmail.com
+                    </p>
+
+                </a>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Guntur, Andhra Pradesh
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://linkedin.com/in/challa-ashok"
+                    target="_blank"
+                    class="contact-card">
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <p>
+                        challa-ashok
+                    </p>
+
+                </a>
+
+
+                <a
+                    href="https://github.com/Ashok121105"
+                    target="_blank"
+                    class="contact-card">
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Ashok121105
+                    </p>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- GET IN TOUCH FORM -->
+
+            <div class="contact-form">
+
+                <h3>
+                    Send Me a Message
+                </h3>
+
+                <p>
+                    Have a project, internship opportunity or
+                    professional enquiry? Feel free to contact me.
+                </p>
+
+
+                <form
+                    id="contactForm"
+                    onsubmit="sendMessage(event)">
+
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        ✉ Send Message
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <h3>
+        Challa Ashok
+    </h3>
+
+    <p>
+        ECE Student | Aspiring Engineer
+    </p>
+
+
+    <div class="social-links">
+
+        <a
+            href="https://linkedin.com/in/challa-ashok"
+            target="_blank">
+
+            LinkedIn
+
+        </a>
+
+
+        <a
+            href="https://github.com/Ashok121105"
+            target="_blank">
+
+            GitHub
+
+        </a>
+
+
+        <a
+            href="mailto:challaashok99@gmail.com">
+
+            Email
+
+        </a>
+
+    </div>
+
+
+    <p>
+        © 2026 Challa Ashok. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    const navLinks =
+        document.querySelectorAll("nav ul li a");
+
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navLinks.forEach(item => {
+
+                item.style.color = "#ddd";
+
+            });
+
+            this.style.color = "#ffb400";
+
+        });
+
+    });
+
+
+
+    /* =========================================================
+       OPEN RESUME
+    ========================================================= */
+
+    function openResume() {
+
+        const viewer =
+            document.getElementById("resumeViewer");
+
+        viewer.classList.add("active");
+
+        setTimeout(() => {
+
+            viewer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 100);
+
+    }
+
+
+
+    /* =========================================================
+       RESUME THUMBNAIL KEYBOARD ACCESS
+    ========================================================= */
+
+    const resumeThumbnail =
+        document.querySelector(".resume-thumbnail");
+
+
+    resumeThumbnail.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter" ||
+            event.key === " ") {
+
+            event.preventDefault();
+
+            openResume();
+
+        }
+
+    });
+
+
+
+    /* =========================================================
+       CONTACT FORM
+       Opens the user's email application with
+       the entered information.
+    ========================================================= */
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("fullName").value.trim();
+
+
+        const email =
+            document.getElementById("email").value.trim();
+
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        const subject =
+            encodeURIComponent(
+                "Portfolio Contact Message from " + name
+            );
+
+
+        const body =
+            encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+
+        window.location.href =
+            "mailto:challaashok99@gmail.com" +
+            "?subject=" + subject +
+            "&body=" + body;
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>
